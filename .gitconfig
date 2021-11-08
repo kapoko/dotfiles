@@ -1,0 +1,9 @@
+[user]
+	name = kapoko
+	email = 17455539+kapoko@users.noreply.github.com
+[pull]
+	ff = only
+[core]
+	ignorecase = false
+[init]
+	defaultBranch = main
