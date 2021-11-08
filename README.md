@@ -21,7 +21,7 @@ git clone https://github.com/kapoko/dotfiles.git ~/.dotfiles
 ```
 
 
-3. Install
+3. Install (**warning**: this will overwrite existing config files in the home folder with symlinks)
 
 ```zsh
 cd ~/.dotfiles
