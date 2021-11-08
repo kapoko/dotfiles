@@ -1,5 +1,6 @@
 # dotfiles 🌱
 
+Because why spend 10 minutes if you can automate it in a couple of hours. 
 
 ## Usage 
 
