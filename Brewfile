@@ -23,6 +23,7 @@ brew "wp-cli"
 brew "youtube-dl"
 
 # Casks
+cask "1password"
 cask "blackhole-16ch"
 cask "docker"
 cask "easyfind"
