@@ -4,8 +4,21 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/kasper/.oh-my-zsh"
 
+# Bashmarks 
+source ~/.local/bin/bashmarks.sh
+
 ZSH_THEME="minimal"
 
 source $ZSH/oh-my-zsh.sh
 
+# Aliases
+alias vim="nvim"
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
+alias nir='npm remove --save'
 eval $(thefuck --alias) 
+
+# Nice git log
+nicelog() {
+    git log --all --decorate --oneline --graph $1
+}

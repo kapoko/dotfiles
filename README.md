@@ -14,10 +14,10 @@ xcode-select --install
 
 ```zsh
 # Use SSH (if set up)...
-git clone git@github.com:kapoko/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules git@github.com:kapoko/dotfiles.git ~/.dotfiles
 
 # ...or use HTTPS and switch remotes later.
-git clone https://github.com/kapoko/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules https://github.com/kapoko/dotfiles.git ~/.dotfiles
 ```
 
 
