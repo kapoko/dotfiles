@@ -31,6 +31,9 @@ sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
+# Set dark mode
+defaults write NSGlobalDomain AppleInterfaceStyle Dark
+
 ##########
 # Finder #
 ##########
