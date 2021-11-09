@@ -27,6 +27,10 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Set the timezone; see 'sudo systemsetup -listtimezones' for other values
 sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
 
+# Disable smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
 ##########
 # Finder #
 ##########
@@ -62,10 +66,12 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 chflags nohidden ~/Library
 
 # Show the /Volumes folder
-sudo chflags hidden /Volumes
+sudo chflags nohidden /Volumes
 
 # Expand the following File "Open with" Info panes:
 defaults write com.apple.finder FXInfoPanesExpanded -dict OpenWith -bool true
+
+killall Finder
 
 ########
 # Dock #
@@ -85,3 +91,4 @@ defaults write com.apple.dock "tilesize" -int "46" && killall Dock
 
 # Disable magnification
 defaults write com.apple.dock magnification -bool false
+
