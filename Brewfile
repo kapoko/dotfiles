@@ -5,6 +5,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 
+brew "act"
 brew "cmake"
 brew "composer"
 brew "coreutils"
