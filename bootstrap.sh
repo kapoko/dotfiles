@@ -6,11 +6,6 @@ info () {
   printf "\r🌱 $1\n"
 }
 
-info 'Installing symlinks'
-ln -svf ~/.dotfiles/.zshrc ~/.zshrc
-ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -svf ~/.dotfiles/.sdirs ~/.sdirs
-
 info 'Setting macOS defaults'
 chmod +x ./.macos && ./.macos
 
@@ -25,6 +20,11 @@ brew bundle --file ~/.dotfiles/Brewfile
 
 info 'Installing bashmarks'
 (cd bashmarks && make install)
+
+info 'Installing symlinks'
+ln -svf ~/.dotfiles/.zshrc ~/.zshrc
+ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -svf ~/.dotfiles/.sdirs ~/.sdirs
 
 source $ZSH/oh-my-zsh.sh
 
