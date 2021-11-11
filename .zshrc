@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/kasper/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
