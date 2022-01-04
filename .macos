@@ -95,3 +95,8 @@ defaults write com.apple.dock "tilesize" -int "46" && killall Dock
 # Disable magnification
 defaults write com.apple.dock magnification -bool false
 
+##########
+# VSCode #
+##########
+
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
