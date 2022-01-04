@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
 
