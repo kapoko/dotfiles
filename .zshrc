@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -10,9 +17,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
 
-ZSH_THEME="minimal"
-
 source $ZSH/oh-my-zsh.sh
+
+# p10k
+source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Aliases
 alias vim="nvim"
@@ -25,3 +33,6 @@ eval $(thefuck --alias)
 nicelog() {
     git log --all --decorate --oneline --graph $1
 }
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

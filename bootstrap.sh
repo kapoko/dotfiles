@@ -25,6 +25,7 @@ info 'Installing symlinks'
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
+ln -svf ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
 
 source $ZSH/oh-my-zsh.sh
 
