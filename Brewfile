@@ -47,6 +47,7 @@ cask "sync"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
+cask "vyprvpn"
 
 # Quicklook plugins
 cask "qlcolorcode"
