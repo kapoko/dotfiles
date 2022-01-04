@@ -52,7 +52,7 @@ cask "vyprvpn"
 cask "qlcolorcode"
 cask "qlimagesize"
 cask "qlmarkdown"
-cask "qlstephen"
+cask "qlstephen" # Might need to fix permissions, see https://github.com/whomwah/qlstephen#permissions-quarantine
 cask "qlvideo"
 cask "quicklook-json"
 cask "quicklookase"
