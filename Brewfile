@@ -23,7 +23,7 @@ brew "php@7.4"
 brew "sox"
 brew "thefuck"
 brew "wp-cli"
-brew "youtube-dl"
+brew "yt-dlp"
 
 # Casks
 cask "1password"
