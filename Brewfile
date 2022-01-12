@@ -20,6 +20,7 @@ brew "node"
 brew "openssh"
 brew "php", restart_service: true
 brew "php@7.4"
+brew "powerlevel10k"
 brew "sox"
 brew "thefuck"
 brew "wp-cli"
