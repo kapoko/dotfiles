@@ -34,5 +34,8 @@ nicelog() {
     git log --all --decorate --oneline --graph $1
 }
 
+# Library path for homebrew installed libraries
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
