@@ -7,3 +7,5 @@
 	ignorecase = false
 [init]
 	defaultBranch = main
+[status]
+	submoduleSummary = true
