@@ -6,6 +6,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 
 brew "act"
+brew "android-platform-tools"
 brew "cmake"
 brew "composer"
 brew "coreutils"
