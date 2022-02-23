@@ -27,12 +27,8 @@ alias vim="nvim"
 alias nis='npm install --save'
 alias nid='npm install --save-dev'
 alias nir='npm remove --save'
+alias nicelog='git log --all --decorate --oneline --graph'
 eval $(thefuck --alias) 
-
-# Nice git log
-nicelog() {
-    git log --all --decorate --oneline --graph $1
-}
 
 # Library path for homebrew installed libraries
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
