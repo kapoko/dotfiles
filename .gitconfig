@@ -1,6 +1,7 @@
 [user]
 	name = kapoko
 	email = 17455539+kapoko@users.noreply.github.com
+	signingkey = E112891EA04578B6
 [pull]
 	ff = only
 [core]
@@ -9,3 +10,7 @@
 	defaultBranch = main
 [status]
 	submoduleSummary = true
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true
