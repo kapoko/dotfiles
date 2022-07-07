@@ -12,7 +12,7 @@ fi
 export ZSH=~/.oh-my-zsh
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$($(brew --prefix)/bin/brew shellenv)"
 
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
@@ -20,7 +20,7 @@ source ~/.local/bin/bashmarks.sh
 source $ZSH/oh-my-zsh.sh
 
 # p10k
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $HOMEBREW_PREFIX/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Aliases
 alias vim="nvim"
@@ -32,6 +32,9 @@ eval $(thefuck --alias)
 
 # Library path for homebrew installed libraries
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
+
+# Allowing commits to be signed with a gpg key
+export GPG_TTY=$TTY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
