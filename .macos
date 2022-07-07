@@ -92,9 +92,6 @@ defaults write com.apple.dock autohide -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
-# Set dock icon size
-defaults write com.apple.dock "tilesize" -int "46" && killall Dock
-
 # Disable magnification
 defaults write com.apple.dock magnification -bool false
 
