@@ -12,7 +12,7 @@ fi
 export ZSH=~/.oh-my-zsh
 
 # Homebrew
-eval "$($(brew --prefix)/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
