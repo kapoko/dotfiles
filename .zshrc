@@ -24,7 +24,7 @@ source ~/.local/bin/bashmarks.sh
 source $ZSH/oh-my-zsh.sh
 
 # p10k
-source $HOMEBREW_PREFIX/opt/powerlevel10k/powerlevel10k.zsh-theme
+source $HOMEBREW_PREFIX/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Aliases
 alias vim="nvim"
