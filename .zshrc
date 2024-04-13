@@ -28,6 +28,7 @@ source $HOMEBREW_PREFIX/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-
 
 # Aliases
 alias vim="nvim"
+alias vi="nvim"
 alias nis='npm install --save'
 alias nid='npm install --save-dev'
 alias nir='npm remove --save'
