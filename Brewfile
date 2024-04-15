@@ -23,7 +23,6 @@ brew "openssh"
 brew "php", restart_service: true
 brew "powerlevel10k"
 brew "ripgrep"
-brew "sox"
 brew "thefuck"
 brew "wp-cli"
 brew "yt-dlp"
