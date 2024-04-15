@@ -26,7 +26,7 @@ ln -svf ~/.dotfiles/.zshrc ~/.zshrc
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
 ln -svf ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -svf ~/.dotfiles/nvim ~/.config/nvim
+ln -svf ~/.dotfiles/nvim ~/.config
 
 source $ZSH/oh-my-zsh.sh
 
