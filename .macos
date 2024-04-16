@@ -95,6 +95,11 @@ defaults write com.apple.dock show-recents -bool false
 # Disable magnification
 defaults write com.apple.dock magnification -bool false
 
+# Disable automatically rearrange spaces
+defaults write com.apple.dock mru-spaces -bool false
+
+killall Dock
+
 ##########
 # VSCode #
 ##########
