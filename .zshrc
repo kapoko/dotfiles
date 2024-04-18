@@ -12,10 +12,12 @@ fi
 export ZSH=~/.oh-my-zsh
 
 # Homebrew
-if [ -f /opt/homebrew/bin/brew ]; then
+if [ -f /opt/homebrew/bin/brew ]; then # Silicon mac
   eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [ -f /usr/local/bin/brew ]; then
+  export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
+elif [ -f /usr/local/bin/brew ]; then # Intel mac
   eval "$(/usr/local/bin/brew shellenv)"
+  export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 fi
 
 # Bashmarks 
@@ -34,9 +36,6 @@ alias nid='npm install --save-dev'
 alias nir='npm remove --save'
 alias nicelog='git log --all --decorate --oneline --graph'
 eval $(thefuck --alias) 
-
-# Library path for homebrew installed libraries
-export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
 
 # Allowing commits to be signed with a gpg key
 export GPG_TTY=$TTY
