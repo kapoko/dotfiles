@@ -24,6 +24,8 @@ brew "php", restart_service: true
 brew "powerlevel10k"
 brew "ripgrep"
 brew "thefuck"
+brew "tpm"
+brew "tmux"
 brew "wp-cli"
 brew "yt-dlp"
 
