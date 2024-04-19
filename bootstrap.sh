@@ -24,7 +24,7 @@ info 'Installing bashmarks'
 info 'Installing symlinks'
 ln -svf ~/.dotfiles/.zshrc ~/.zshrc
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -svf ~/.dotfiles/.tmux.config ~/.tmux.config
+ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
 ln -svf ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -svf ~/.dotfiles/nvim ~/.config
