@@ -14,11 +14,10 @@ export ZSH=~/.oh-my-zsh
 # Homebrew
 if [ -f /opt/homebrew/bin/brew ]; then # Silicon mac
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:/opt/homebrew/lib"
 elif [ -f /usr/local/bin/brew ]; then # Intel mac
   eval "$(/usr/local/bin/brew shellenv)"
-  export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 fi
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:$HOMEBREW_PREFIX/lib"
 
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
