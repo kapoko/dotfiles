@@ -7,3 +7,5 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.listchars = { tab = '→ ', trail = '⋅', nbsp = '⋅' }
 vim.opt.list = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
