@@ -19,6 +19,7 @@ brew "neofetch"
 brew "neovim"
 brew "nmap"
 brew "node"
+brew "odin"
 brew "openssh"
 brew "php", restart_service: true
 brew "powerlevel10k"

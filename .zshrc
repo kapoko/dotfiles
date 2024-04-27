@@ -19,6 +19,9 @@ elif [ -f /usr/local/bin/brew ]; then # Intel mac
 fi
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:$HOMEBREW_PREFIX/lib"
 
+# ODIN lsp
+export ODIN_ROOT=$(dirname $(dirname "$(readlink -f $(which odin))"))/libexec 
+
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
 
