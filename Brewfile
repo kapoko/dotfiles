@@ -32,6 +32,7 @@ brew "yt-dlp"
 
 # Casks
 cask "1password"
+cask "alacritty"
 cask "android-platform-tools"
 cask "blackhole-16ch"
 cask "docker"

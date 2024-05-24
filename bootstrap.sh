@@ -28,6 +28,7 @@ ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
 ln -svf ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -svf ~/.dotfiles/nvim ~/.config
+ln -svf ~/.dotfiles/alacritty ~/.config
 
 source $ZSH/oh-my-zsh.sh
 
