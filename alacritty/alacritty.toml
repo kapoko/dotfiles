@@ -1,3 +1,7 @@
+import = [
+    "~/.config/alacritty/themes/dracula_plus.toml"
+]
+
 [font]
 normal = { family = "JetbrainsMono Nerd Font Mono", style = "ExtraLight" }
 size = 14
