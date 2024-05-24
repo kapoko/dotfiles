@@ -2,7 +2,7 @@
 
 [colors.primary]
 background = '#171717'
-foreground = '#E0E0DA'
+foreground = '#C7C7C3'
 
 [colors.cursor]
 text = '#0E1415'
