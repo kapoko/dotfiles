@@ -9,4 +9,4 @@ vim.opt.listchars = { tab = '→ ', trail = '⋅', nbsp = '⋅' }
 vim.opt.list = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
+vim.opt.scrolloff = 5
