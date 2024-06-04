@@ -6,7 +6,6 @@ require("kapoko.lazy_init")
 vim.api.nvim_exec([[
   augroup FormatAutogroup
     autocmd!
-    autocmd BufWritePost *.lua,*.md,*.markdown,*.odin,*.c lua vim.lsp.buf.format()
+    autocmd BufWritePost *.lua,*.odin,*.c lua vim.lsp.buf.format()
   augroup END
 ]], true)
-
