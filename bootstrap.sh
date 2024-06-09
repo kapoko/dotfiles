@@ -26,7 +26,7 @@ ln -svf ~/.dotfiles/.zshrc ~/.zshrc
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
-ln -svf ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -svf ~/.dotfiles/starship.toml ~/.config/starship.toml
 ln -svf ~/.dotfiles/nvim ~/.config
 ln -svf ~/.dotfiles/alacritty ~/.config
 
