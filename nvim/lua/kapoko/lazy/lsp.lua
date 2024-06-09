@@ -18,11 +18,9 @@ return {
         local cmp_lsp = require("cmp_nvim_lsp")
         local capabilities = cmp_lsp.default_capabilities()
         local lspconfig = require("lspconfig")
-        local mason = require("mason")
-        local mason_lspconfig = require("mason-lspconfig")
 
-        mason.setup()
-        mason_lspconfig.setup({
+            require("mason").setup()
+        require("mason-lspconfig").setup({
             ensure_installed = { "clangd", "ols" },
             handlers = {
                 function(server_name)
