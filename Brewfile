@@ -3,6 +3,7 @@ tap "homebrew/services"
 tap "romkatv/powerlevel10k"
 
 brew "act"
+brew "ansible"
 brew "cmake"
 brew "composer"
 brew "coreutils"
