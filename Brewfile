@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "romkatv/powerlevel10k"
 
 brew "act"
 brew "ansible"
