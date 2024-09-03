@@ -12,9 +12,6 @@ export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:$HOMEBREW_PREFIX/lib"
 # ODIN lsp
 export ODIN_ROOT=$(dirname $(dirname "$(greadlink -f $(which odin))"))/libexec 
 
-# Vulkan
-export VK_ICD_FILENAMES=$HOMEBREW_PREFIX/opt/vulkan-tools/lib/mock_icd/VkICD_mock_icd.json
-
 # Bashmarks 
 source ~/.local/bin/bashmarks.sh
 
