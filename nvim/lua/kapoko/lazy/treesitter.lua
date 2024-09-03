@@ -3,10 +3,10 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            require'nvim-treesitter.configs'.setup {
-                ensure_installed = { 
+            require 'nvim-treesitter.configs'.setup {
+                ensure_installed = {
                     "c", "lua", "vim", "vimdoc", "query",
-                    "javascript", "typescript", "bash", "php"
+                    "javascript", "typescript", "bash", "php", "glsl"
                 },
 
                 sync_install = false,
@@ -20,6 +20,7 @@ return {
         end
     },
     {
-        "nvim-treesitter/playground"
+        "nvim-treesitter/playground",
+        "tikhomirov/vim-glsl"
     }
 }
