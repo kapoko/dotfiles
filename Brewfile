@@ -19,6 +19,7 @@ brew "node"
 brew "odin"
 brew "openssh"
 brew "php", restart_service: true
+brew "php-cs-fixer"
 brew "ripgrep"
 brew "starship"
 brew "thefuck"
