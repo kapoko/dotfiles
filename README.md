@@ -17,13 +17,8 @@ xcode-select --install
 2. Clone repo into new hidden directory.
 
 ```zsh
-# Use SSH (if set up)...
-git clone --recurse-submodules git@github.com:kapoko/dotfiles.git ~/.dotfiles
-
-# ...or use HTTPS and switch remotes later.
 git clone --recurse-submodules https://github.com/kapoko/dotfiles.git ~/.dotfiles
 ```
-
 
 3. Install (**warning**: this will overwrite existing config files in the home folder with symlinks)
 
