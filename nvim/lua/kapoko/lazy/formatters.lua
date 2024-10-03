@@ -5,14 +5,12 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     opts = {
         formatters_by_ft = {
-            php = { "php-cs-fixer" },
+            php = { "phpcbf" },
         },
         formatters = {
-            ["php-cs-fixer"] = {
-                command = "php-cs-fixer",
+            ["phpcbf"] = {
+                command = "phpcbf",
                 args = {
-                    "fix",
-                    "--rules=@PSR12", -- Formatting preset. Other presets are available, see the php-cs-fixer docs.
                     "$FILENAME",
                 },
                 stdin = false,
