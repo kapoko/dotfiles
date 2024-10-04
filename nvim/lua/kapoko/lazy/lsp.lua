@@ -19,9 +19,9 @@ return {
         local capabilities = cmp_lsp.default_capabilities()
         local lspconfig = require("lspconfig")
 
-            require("mason").setup()
+        require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "clangd", "ols" },
+            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls" },
             handlers = {
                 function(server_name)
                     lspconfig[server_name].setup({
@@ -47,6 +47,13 @@ return {
                                 }
                             }
                         }
+                    }
+                end,
+                ts_ls = function()
+                    lspconfig.ts_ls.setup {
+                        on_attach = function(client)
+                            client.server_capabilities.documentFormattingProvider = false
+                        end,
                     }
                 end,
             }

@@ -11,6 +11,7 @@ return {
             ["phpcbf"] = {
                 command = "phpcbf",
                 args = {
+                    "--standard=PSR12",
                     "$FILENAME",
                 },
                 stdin = false,
