@@ -1,0 +1,7 @@
+font-size = 16
+theme = Dracula+
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-color = ffb86c
+background = 181818
+confirm-close-surface = false
