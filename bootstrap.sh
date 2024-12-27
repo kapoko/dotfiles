@@ -26,9 +26,10 @@ ln -svf ~/.dotfiles/.zshrc ~/.zshrc
 ln -svf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 ln -svf ~/.dotfiles/.sdirs ~/.sdirs
-ln -svf ~/.dotfiles/starship.toml ~/.config/starship.toml
-ln -svf ~/.dotfiles/nvim ~/.config
-ln -svf ~/.dotfiles/alacritty ~/.config
+
+ln -svf ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
+ln -svf ~/.dotfiles/.config/nvim ~/.config
+ln -svf ~/.dotfiles/.config/alacritty ~/.config
 
 source $ZSH/oh-my-zsh.sh
 
