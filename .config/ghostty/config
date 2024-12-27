@@ -4,4 +4,5 @@ cursor-style = block
 shell-integration-features = no-cursor
 cursor-color = ffb86c
 background = 181818
+foreground = c7c7c3
 confirm-close-surface = false
