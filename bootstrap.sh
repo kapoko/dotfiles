@@ -31,6 +31,7 @@ ln -svf ~/.dotfiles/.config/starship.toml ~/.config/starship.toml
 ln -svf ~/.dotfiles/.config/nvim ~/.config
 ln -svf ~/.dotfiles/.config/alacritty ~/.config
 ln -svf ~/.dotfiles/.config/ghostty ~/.config
+ln -svf ~/.dotfiles/.config/tmux ~/.config
 
 source $ZSH/oh-my-zsh.sh
 
