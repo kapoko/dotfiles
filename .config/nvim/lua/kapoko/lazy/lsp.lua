@@ -22,7 +22,7 @@ return {
 
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls", "denols" },
+            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls" },
             handlers = {
                 function(server_name)
                     lspconfig[server_name].setup({
@@ -57,12 +57,6 @@ return {
                         end,
                         root_dir = lspconfig.util.root_pattern("package.json"),
                         single_file_support = false
-                    }
-                end,
-                denols = function()
-                    lspconfig.denols.setup {
-                        capabilities = capabilities,
-                        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc", "deno.lock"),
                     }
                 end,
             }
