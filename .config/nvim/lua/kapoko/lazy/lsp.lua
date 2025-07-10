@@ -4,7 +4,6 @@ return {
     dependencies = {
         "mason-org/mason.nvim",
         "mason-org/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
@@ -19,47 +18,48 @@ return {
         local cmp_lsp = require("cmp_nvim_lsp")
         local capabilities = cmp_lsp.default_capabilities()
         local lspconfig = require("lspconfig")
+        local util = require("lspconfig.util")
 
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls" },
-            handlers = {
-                function(server_name)
-                    lspconfig[server_name].setup({
-                        capabilities = capabilities
-                    })
-                end,
-                clangd = function()
-                    lspconfig.clangd.setup({
-                        capabilities = capabilities,
-                        cmd = {
-                            "clangd",
-                            "-compile-commands-dir=/lsp/clangd"
-                        }
-                    })
-                end,
-                lua_ls = function()
-                    lspconfig.lua_ls.setup {
-                        capabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                diagnostics = {
-                                    globals = { "vim" },
-                                }
-                            }
-                        }
-                    }
-                end,
-                ts_ls = function()
-                    lspconfig.ts_ls.setup {
-                        on_attach = function(client)
-                            client.server_capabilities.documentFormattingProvider = false
-                        end,
-                        root_dir = lspconfig.util.root_pattern("package.json"),
-                        single_file_support = false
-                    }
-                end,
+            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls", "phpactor" },
+        })
+
+        vim.lsp.config("*", {
+            capabilities = capabilities,
+        })
+
+        vim.lsp.config("clangd", {
+            capabilities = capabilities,
+            cmd = {
+                "clangd",
+                "-compile-commands-dir=/lsp/clangd"
             }
+        })
+
+        vim.lsp.config("lua_ls", {
+            capabilities = capabilities,
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    }
+                }
+            }
+        })
+
+        vim.lsp.config("ts_ls", {
+            capabilities = capabilities,
+            on_attach = function(client)
+                client.server_capabilities.documentFormattingProvider = false
+            end,
+            root_dir = util.root_pattern("package.json"),
+            single_file_support = false
+        })
+
+        vim.lsp.config("phpactor", {
+            capabilities = capabilities,
+            root_markers = { "vendor", "composer.json", ".git" }
         })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
