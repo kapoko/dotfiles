@@ -59,7 +59,7 @@ return {
 
         vim.lsp.config("phpactor", {
             capabilities = capabilities,
-            root_markers = { "vendor", "composer.json", ".git" }
+            root_markers = { "vendor" }
         })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
