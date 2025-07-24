@@ -32,6 +32,7 @@ ln -svf ~/.dotfiles/.config/nvim ~/.config
 ln -svf ~/.dotfiles/.config/alacritty ~/.config
 ln -svf ~/.dotfiles/.config/ghostty ~/.config
 ln -svf ~/.dotfiles/.config/tmux ~/.config
+ln -svf ~/.dotfiles/.config/opencode ~/.config
 
 source $ZSH/oh-my-zsh.sh
 
