@@ -6,6 +6,9 @@ return {
     opts = {
         formatters_by_ft = {
             php = { "phpcbf" },
+            scss = { "prettier" },
+            sass = { "prettier" },
+            css = { "prettier" },
         },
         formatters = {
             ["phpcbf"] = {
@@ -15,6 +18,10 @@ return {
                     "$FILENAME",
                 },
                 stdin = false,
+            },
+            ["prettier"] = {
+                command = "prettier",
+                args = { "--stdin-filepath", "$FILENAME" },
             },
         },
         format_on_save = {

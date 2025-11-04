@@ -17,7 +17,6 @@ return {
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
         local capabilities = cmp_lsp.default_capabilities()
-        local lspconfig = require("lspconfig")
         local util = require("lspconfig.util")
 
         require("mason").setup()
