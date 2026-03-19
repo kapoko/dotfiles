@@ -9,6 +9,12 @@ return {
             scss = { "prettier" },
             sass = { "prettier" },
             css = { "prettier" },
+            typescript = { "biome" },
+            javascript = { "biome" },
+            typescriptreact = { "biome" },
+            javascriptreact = { "biome" },
+            json = { "biome" },
+            jsonc = { "biome" },
         },
         formatters = {
             ["phpcbf"] = {

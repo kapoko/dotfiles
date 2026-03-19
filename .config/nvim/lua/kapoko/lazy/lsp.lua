@@ -17,11 +17,12 @@ return {
         local cmp = require('cmp')
         local cmp_lsp = require("cmp_nvim_lsp")
         local capabilities = cmp_lsp.default_capabilities()
-        local util = require("lspconfig.util")
-
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls", "phpactor" },
+            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls", "phpactor", "biome" },
+            handlers = {
+                function() end, -- no-op: defer all server setup to vim.lsp.config/enable
+            },
         })
 
         vim.lsp.config("*", {
@@ -52,7 +53,7 @@ return {
             on_attach = function(client)
                 client.server_capabilities.documentFormattingProvider = false
             end,
-            root_dir = util.root_pattern("package.json"),
+            root_markers = { "tsconfig.json", "package.json", "jsconfig.json" },
             single_file_support = false
         })
 
@@ -60,6 +61,18 @@ return {
             capabilities = capabilities,
             root_markers = { "vendor" }
         })
+
+        vim.lsp.config("biome", {
+            capabilities = capabilities,
+            root_markers = { "biome.json" },
+            single_file_support = false
+        })
+
+        vim.lsp.enable('clangd')
+        vim.lsp.enable('lua_ls')
+        vim.lsp.enable('ts_ls')
+        vim.lsp.enable('phpactor')
+        vim.lsp.enable('biome')
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
