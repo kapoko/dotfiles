@@ -4,7 +4,7 @@ Because why spend 10 minutes if you can automate it in a couple of hours.
 
 ## Prerequisites
 
-Needs `zsh` to be the default shell (default since macOS )
+Needs `zsh` to be the default shell (default since macOS 10.15)
 
 ## Usage 
 
