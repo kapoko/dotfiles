@@ -19,7 +19,7 @@ return {
         local capabilities = cmp_lsp.default_capabilities()
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "clangd", "ols", "lua_ls", "ts_ls", "phpactor", "biome" },
+            ensure_installed = { "ols", "lua_ls", "ts_ls", "phpactor", "biome" },
             handlers = {
                 function() end, -- no-op: defer all server setup to vim.lsp.config/enable
             },
