@@ -1,34 +1,60 @@
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+case "$(uname -s)" in
+  Linux*)  OS="linux" ;;
+  Darwin*) OS="macos" ;;
+  *)       OS="other" ;;
+esac
 
-# Homebrew
-if [ -f /opt/homebrew/bin/brew ]; then # Silicon mac
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [ -f /usr/local/bin/brew ]; then # Intel mac
-  eval "$(/usr/local/bin/brew shellenv)"
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_COMPDUMP="$ZSH/cache/.zcompdump-$HOST"
+
+if [[ "$OS" == "linux" ]]; then
+  export LC_ALL="C.UTF-8"
+
+  if [[ -f /srv/taartdoos-server/.env ]]; then
+    set -a
+    source /srv/taartdoos-server/.env
+    set +a
+  fi
 fi
-export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib:$HOMEBREW_PREFIX/lib"
 
-# ODIN lsp
-export ODIN_ROOT=$(dirname $(dirname "$(greadlink -f $(which odin))"))/libexec 
+if [[ "$OS" == "macos" ]]; then
+  if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [[ -f /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
 
-# Bashmarks 
-source ~/.local/bin/bashmarks.sh
+  export LIBRARY_PATH="${LIBRARY_PATH:+$LIBRARY_PATH:}/usr/local/lib:${HOMEBREW_PREFIX:-/usr/local}/lib"
 
-source $ZSH/oh-my-zsh.sh
+  if command -v odin >/dev/null 2>&1 && command -v greadlink >/dev/null 2>&1; then
+    export ODIN_ROOT="$(dirname "$(dirname "$(greadlink -f "$(which odin)")")")/libexec"
+  fi
 
-# Aliases
+  [[ -f "$HOME/.local/bin/bashmarks.sh" ]] && source "$HOME/.local/bin/bashmarks.sh"
+
+  export GPG_TTY="$(tty)"
+fi
+
+export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:/bin:/snap/bin"
+export SYSTEMD_EDITOR="vim"
+
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+
+source "$ZSH/oh-my-zsh.sh"
+
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+if command -v thefuck >/dev/null 2>&1; then
+  eval "$(thefuck --alias)"
+fi
+
+alias nicelog='git log --all --decorate --oneline --graph'
 alias vim="nvim"
 alias vi="nvim"
 alias nis='npm install --save'
 alias nid='npm install --save-dev'
 alias nir='npm remove --save'
-alias nicelog='git log --all --decorate --oneline --graph'
-eval $(thefuck --alias) 
-
-# Allowing commits to be signed with a gpg key
-export GPG_TTY=$TTY
-
-# Starship 
-eval "$(starship init zsh)"
-
