@@ -32,6 +32,9 @@ if [[ "$OS" == "macos" ]]; then
 
   [[ -f "$HOME/.local/bin/bashmarks.sh" ]] && source "$HOME/.local/bin/bashmarks.sh"
 
+fi
+
+if command -v gpg >/dev/null 2>&1 && command -v tty >/dev/null 2>&1; then
   export GPG_TTY="$(tty)"
 fi
 
