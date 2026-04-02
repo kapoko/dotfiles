@@ -25,6 +25,3 @@ Config.on_packchanged = function(plugin_name, kinds, callback, desc)
     end
     Config.new_autocmd('PackChanged', '*', f, desc)
 end
-
-require("options")
-require("remap")
