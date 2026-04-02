@@ -13,8 +13,7 @@ Config.now_if_args(function()
     })
 
     local cmp = require("cmp")
-    local cmp_lsp = require("cmp_nvim_lsp")
-    local capabilities = cmp_lsp.default_capabilities()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     require("mason").setup()
     require("mason-lspconfig").setup({
