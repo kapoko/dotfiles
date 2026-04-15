@@ -4,7 +4,7 @@ import = [
 ]
 
 [font]
-normal = { family = "JetbrainsMono Nerd Font Mono", style = "ExtraLight" }
+normal = { family = "JetbrainsMono Nerd Font", style = "ExtraLight" }
 size = 16
 
 [keyboard]
