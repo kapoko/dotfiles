@@ -41,9 +41,8 @@ fi
 export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:/bin:/snap/bin"
 export SYSTEMD_EDITOR="vim"
 
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-[[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm, without auto-using the default version
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -51,9 +50,11 @@ if command -v starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-if command -v thefuck >/dev/null 2>&1; then
+fuck() {
+  unset -f fuck
   eval "$(thefuck --alias)"
-fi
+  fuck "$@"
+}
 
 alias nicelog='git log --all --decorate --oneline --graph'
 alias vim="nvim"
